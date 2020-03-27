@@ -1,0 +1,10 @@
+applications:
+- name: pythonredis
+  buildpacks: 
+  - python_buildpack
+  memmory: 128M
+  random-route: true
+  command: python server.py
+  services:
+  - myredis
+  env:

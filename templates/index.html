@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Python says Hello World!</title>
+    </head>
+    <body>
+        <h1>Python says Hello World!</h1>
+        <p>And this is running on the SUSE Cloud Application Platform developer sandbox...</p>
+        <p>Using a redis database is super easy with the Minibroker!</p>
+        <p>
+        	<form method="POST" action="/addvalue">
+        		Add value <input type="text" name="value" placeholder="myvalue" /> <input type="submit" value="Add" /> to database! 
+        	</form>
+        	<form method="POST" action="/removevalue">
+        		Remove value <input type="text" name="value" placeholder="myvalue" /> <input type="submit" value="Remove" /> from database!
+        </p>
+        <p>Currently the database contains the following:</p>
+        <ul>
+        	{% for word in redis_words %}
+        	<li>{{ word }}</li>
+        	{% endfor %}
+        </ul>
+
+    </body>
+</html>
